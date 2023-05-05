@@ -69,7 +69,7 @@ const MongoHelper = {
       const res = isLean
         ? await Event.find(condition).lean()
         : await Event.find(condition);
-
+        
       return res;
     },
     async FindEvent(condition) {

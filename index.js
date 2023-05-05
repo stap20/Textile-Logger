@@ -8,7 +8,7 @@ const fs = require("fs");
 const MongoHelper = require("./helpers/mongoHelper");
 const csv = require("fast-csv");
 const client = mqtt.connect("mqtt:broker.hivemq.com:1883");
-const uri = "mongodb+srv://stap20:khaled101198@textile-logger.wclirgm.mongodb.net/?retryWrites=true&w=majority";
+const uri = "mongodb+srv://stap20:khaled101198@textile-logger.wclirgm.mongodb.net/TextileLogs?retryWrites=true&w=majority";
 
 //------------------------------ app.use() session --------------------------------
 //Intiate Server App
@@ -83,7 +83,7 @@ app.get("/download/*", async (req, res) => {
     });
 
     csvStream.end();
-
+    
     res.setHeader(
       "Content-disposition",
       `attachment; filename=${collectionName}.csv`
