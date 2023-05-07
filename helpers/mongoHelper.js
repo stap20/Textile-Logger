@@ -9,7 +9,7 @@ const MongoHelper = {
 
       try {
         machineCollection.save();
-        console.log("Machine Saved Successful");
+        //console.log("Machine Saved Successful");
       } catch (e) {
         console.log("Machine Not Saved Successful");
       }
@@ -34,7 +34,7 @@ const MongoHelper = {
 
       try {
         logCollection.save();
-        console.log("Log Saved Successful");
+        //console.log("Log Saved Successful");
       } catch (e) {
         console.log("Log Not Saved Successful");
       }
@@ -60,7 +60,7 @@ const MongoHelper = {
       try {
         console.log(event);
         eventCollection.save();
-        console.log("Event Saved Succefull");
+        //console.log("Event Saved Succefull");
       } catch (e) {
         console.log("Event Not Saved Succefull");
       }
@@ -81,7 +81,7 @@ const MongoHelper = {
       try {
         await Event.updateOne(condition, { $set: datetime }, { upsert: true });
 
-        console.log("Event Close Time Updated Successful");
+        //console.log("Event Close Time Updated Successful");
       } catch (e) {
         console.log("Machine doesn't have event to close it");
       }
